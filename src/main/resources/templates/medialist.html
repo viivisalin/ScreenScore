@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ScreenScore</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>ScreenScore</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Duration (min)</th>
+            <th>Publication Year</th>
+            <th>Genre</th>
+            <th>Description</th>
+            <th>Rating</th>
+        </tr>
+        
+        <tr th:each="media : ${medias}">
+            <td th:text="${media.title}">title</td>
+            <td th:text="${media.director}">author</td>
+            <td th:text="${media.pubYear}">publicationYear</td>
+            <td th:text="${media.genre.name}">genre</td>
+            <td th:text="${media.description}">description</td>
+            <td th:text="${media.rating}">rating</td>
+
+            <td>
+                
+            </td>
+            
+        </tr>
+    </table>
+    
+</body>
+</html>

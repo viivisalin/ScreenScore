@@ -1,5 +1,6 @@
 package com.example.ScreenScore;
 
+import org.hibernate.type.descriptor.jdbc.NCharJdbcType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -11,6 +12,7 @@ import com.example.ScreenScore.model.Genre;
 import com.example.ScreenScore.model.GenreRepository;
 import com.example.ScreenScore.model.Media;
 import com.example.ScreenScore.model.MediaRepository;
+import com.example.ScreenScore.model.MediaType;
 import com.example.ScreenScore.model.MediaTypeReposity;
 
 @SpringBootApplication
@@ -32,7 +34,14 @@ public class ScreenScoreApplication {
 			Genre fantasy = new Genre("Fantasy");
 			gRepository.save(fantasy);
 
-			mRepository.save(new Media("The Hobbit - Desolation of Smaug", "Peter Jackson", 161, 2013, "The dwarbes, along with Bilbo Baggins and Gandalf the Gray, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."));
+			log.info("media types");
+			MediaType movie = new MediaType("Movie");
+			mTypeReposity.save(movie);
+			MediaType show = new MediaType("Show");
+			mTypeReposity.save(show);
+
+			mRepository.save(new Media(movie, "The Hobbit - Desolation of Smaug", "Peter Jackson", 161, 2013, fantasy, "The dwarbes, along with Bilbo Baggins and Gandalf the Gray, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.", 5));
+			mRepository.save(new Media(show, "Bones", "Hart Hanson", 40, 2007, comedy, "F.B.I. Special Agent Seeley Booth teams up with the Jeffersonian's top anthropologist, Dr. Temperance Brennan, to investigate cases where all that's left of the victims are their bones.", 5));
 	
 			log.info("fetch all medias");
 			for (Media media : mRepository.findAll()) {

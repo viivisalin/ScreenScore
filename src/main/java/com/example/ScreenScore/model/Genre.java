@@ -1,9 +1,13 @@
 package com.example.ScreenScore.model;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Genre {
@@ -12,6 +16,9 @@ public class Genre {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long genreid;
     private String name;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "genre")
+    private List<Media> medias;
 
     public Genre() {
     }

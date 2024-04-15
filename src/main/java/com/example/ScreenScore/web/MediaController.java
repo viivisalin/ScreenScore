@@ -20,7 +20,8 @@ public class MediaController {
     @GetMapping("/medialist")
     public String MediaList(Model model) {
         model.addAttribute("medias", mediaRepository.findAll());
-        return "mediaList";
+        System.out.println("JUKKA " + mediaRepository.findAll());
+        return "medialist";
     }
 
     @GetMapping("/showaddmedia")

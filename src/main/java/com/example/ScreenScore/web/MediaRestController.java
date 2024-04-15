@@ -20,18 +20,18 @@ public class MediaRestController {
     @Autowired
     private MediaRepository mediaRepository;
 
-    @GetMapping("/books")
-    public @ResponseBody List<Media> bookListRest() {
+    @GetMapping("/medias")
+    public @ResponseBody List<Media> mediaListRest() {
         return (List<Media>) mediaRepository.findAll();
     }
 
-    @GetMapping("/books/{id}")
-    public @ResponseBody Optional<Media> findBookRest (@PathVariable("id") Long bookId) {
-        return mediaRepository.findById(bookId);
+    @GetMapping("/medias/{id}")
+    public @ResponseBody Optional<Media> findMediaRest (@PathVariable("id") Long mediaid) {
+        return mediaRepository.findById(mediaid);
     }
 
-    @PostMapping("/books")
-    public @ResponseBody Media saveBookRest (@RequestBody Media media) {
+    @PostMapping("/medias")
+    public @ResponseBody Media saveMediaRest (@RequestBody Media media) {
         return mediaRepository.save(media);
     }
 }

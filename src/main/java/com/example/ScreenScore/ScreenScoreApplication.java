@@ -41,7 +41,8 @@ public class ScreenScoreApplication {
 			mTypeReposity.save(show);
 
 			mRepository.save(new Media(movie, "The Hobbit - Desolation of Smaug", "Peter Jackson", 161, 2013, fantasy, "The dwarbes, along with Bilbo Baggins and Gandalf the Gray, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.", 5));
-			mRepository.save(new Media(show, "Bones", "Hart Hanson", 40, 2007, comedy, "F.B.I. Special Agent Seeley Booth teams up with the Jeffersonian's top anthropologist, Dr. Temperance Brennan, to investigate cases where all that's left of the victims are their bones.", 5));
+			mRepository.save(new Media(show, "Bones", "Hart Hanson", 40, 2007, comedy, "F.B.I. Special Agent Seeley Booth teams up with the Jeffersonian's top anthropologist, Dr. Temperance Brennan, to investigate cases where all that's left of the victims are their bones.", 4));
+			mRepository.save(new Media(movie, "Barbie", "Greta Gerwig", 114, 2023, adventure, "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect wolrd of Barbie Land. However, when they get a change to go to the real world, they soon discover the joys and perils of living among humans.", 5));
 	
 			log.info("fetch all medias");
 			for (Media media : mRepository.findAll()) {

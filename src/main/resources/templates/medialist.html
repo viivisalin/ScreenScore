@@ -21,7 +21,8 @@
         <tr th:each="media : ${medias}">
             <td th:text="${media.mediaType.typeName}">mediaType</td>
             <td th:text="${media.title}">title</td>
-            <td th:text="${media.director}">author</td>
+            <td th:text="${media.director}">director</td>
+            <td th:text="${media.duration}">duration</td>
             <td th:text="${media.pubYear}">publicationYear</td>
             <td th:text="${media.genre.name}">genre</td>
             <td th:text="${media.desc}">description</td>

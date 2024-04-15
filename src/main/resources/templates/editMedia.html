@@ -6,15 +6,15 @@
 </head>
 <body>
     <h1>Edit Media</h1>
-    <form action="#" th:action="@{/addmedia}" th:object="${media}" method="post">
+    <form action="#" th:action="@{/editmedia}" th:object="${media}" method="post">
         <input type="hidden" th:field="*{mediaid}">
         <label>Media Type: <input type="text" th:field="*{mediaType.typeName}"></label><br>
         <label>Title: <input type="text" th:field="*{title}"></label><br>
         <label>Director: <input type="text" th:field="*{director}"></label><br>
         <label>Duration (min): <input type="text" th:field="*{duration}"></label><br>
-        <label>Publication Year: <input type="text" th:field="*{publicationYear}"></label><br>
+        <label>Publication Year: <input type="text" th:field="*{pubYear}"></label><br>
         <label>Genre: <input type="text" th:field="*{genre.name}"></label><br>
-        <label>Description: <input type="text" th:field="*{description}"></label><br>
+        <label>Description: <input type="text" th:field="*{desc}"></label><br>
         <label>Rating: <input type="text" th:field="*{rating}"></label><br>
         <input type="submit" value="Save Changes">
     </form>

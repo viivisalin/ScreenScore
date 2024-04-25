@@ -11,7 +11,9 @@ import jakarta.persistence.ManyToOne;
 public class Media {
 
     @Id
+    // Specifies the primary key with automatic generation
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // Media variables
     private Long mediaid;
     private String title;
     private String director;
@@ -20,18 +22,21 @@ public class Media {
     private String desc;
     private int rating;    
 
+    // This entity has a many-to-one relationship with the Genre entity
     @ManyToOne
     @JoinColumn
     private Genre genre;
 
+    // This entity has a many-to-one relationship with the MediaType entity
     @ManyToOne
     @JoinColumn(name = "mtypeid")
     private MediaType mediaType;
 
-
+    // No-property constructor
     public Media() {
     }
 
+    // Constructor to initialize MediaType properties
     public Media(MediaType mediaType, String title, String director, int duration, int pubYear, Genre genre, String desc, int rating) {
         this.mediaid = mediaid;
         this.mediaType = mediaType;
@@ -43,6 +48,8 @@ public class Media {
         this.desc = desc;
         this.rating = rating;
     }
+
+    // Getters and Setters
 
     public Long getMediaid() {
         return mediaid;
@@ -116,6 +123,7 @@ public class Media {
         this.mediaType = mediaType;
     }
 
+    // toString
     @Override
     public String toString() {
         return "Media [mediaid=" + mediaid + ", media type=" + this.getMediaType() + ", title=" + title + ", director=" + director + ", duration=" + duration

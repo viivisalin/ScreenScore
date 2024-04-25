@@ -23,6 +23,9 @@ public class ScreenScoreApplication {
 		SpringApplication.run(ScreenScoreApplication.class, args);
 	}
 
+	// CommandLineRunner generates a couple movies and shows to the list
+	// it also generates some genres and the two media types that are used
+
 	@Bean
 	public CommandLineRunner mediaDemo(MediaRepository mRepository, GenreRepository gRepository, MediaTypeReposity mTypeReposity) {
 		return (args) -> {

@@ -13,20 +13,27 @@ import jakarta.persistence.OneToMany;
 public class MediaType {
 
     @Id
+    // Specifies the primary key with automatic generation
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // MediaType variables
     private Long mtypeid;
     private String typeName;
 
+    // This entity has a one-to-many relationship with the Media entity
     @OneToMany(mappedBy = "mediaType", cascade = CascadeType.ALL)
     private List<Media> medias;
 
+    // No-argument constructor
     public MediaType() {
     }
 
+    // Constructor to initialize MediaType properties
     public MediaType(String typeName) {
         this.mtypeid = mtypeid;
         this.typeName = typeName;
     }
+
+    // Getters and Setters
 
     public Long getMtypeid() {
         return mtypeid;

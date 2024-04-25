@@ -13,20 +13,27 @@ import jakarta.persistence.OneToMany;
 public class Genre {
 
     @Id
+    // Specifies the primary key with automatic generation
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // Genre variables
     private Long genreid;
     private String name;
 
+    // This entity has a one-to-many relationship with the Media entity
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "genre")
     private List<Media> medias;
 
+    // No-argument constructor
     public Genre() {
     }
     
+    // Constructor to initialize Genre properties
     public Genre(String name) {
         this.genreid = genreid;
         this.name = name;
     }
+
+    // Getters and Setters
 
     public Long getGenreid() {
         return genreid;

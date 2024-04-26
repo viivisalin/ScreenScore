@@ -36,6 +36,8 @@ public class ScreenScoreApplication {
 			gRepository.save(adventure);
 			Genre fantasy = new Genre("Fantasy");
 			gRepository.save(fantasy);
+			Genre dystopia = new Genre("Dystopia");
+			gRepository.save(dystopia);
 
 			log.info("media types");
 			MediaType movie = new MediaType("Movie");

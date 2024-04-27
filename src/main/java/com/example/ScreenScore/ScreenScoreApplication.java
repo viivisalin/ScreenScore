@@ -1,6 +1,5 @@
 package com.example.ScreenScore;
 
-import org.hibernate.type.descriptor.jdbc.NCharJdbcType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

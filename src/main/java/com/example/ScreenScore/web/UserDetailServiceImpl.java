@@ -1,4 +1,4 @@
-package com.example.ScreenScore.web;
+/* package com.example.ScreenScore.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -38,7 +38,7 @@ public class UserDetailServiceImpl implements UserDetailsService{
 
         return builder.build();
     }
-*/
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -46,3 +46,4 @@ public class UserDetailServiceImpl implements UserDetailsService{
         throw new UnsupportedOperationException("Unimplemented method 'loadUserByUsername'");
     }
 }
+*/

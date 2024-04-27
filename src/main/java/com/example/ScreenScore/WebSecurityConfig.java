@@ -1,17 +1,15 @@
-package com.example.ScreenScore;
+/*package com.example.ScreenScore;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-//import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
 
 
 @Configuration
 @EnableWebSecurity
-//@EnableMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig {
 
     @Bean
@@ -24,8 +22,8 @@ public class WebSecurityConfig {
             )
             .formLogin(formlogin -> formlogin
                 .loginPage("/login")
-                .defaultSuccessUrl("/medialist", true)
                 .permitAll()
+                .defaultSuccessUrl("/medialist", true)
             )
             .logout(logout -> logout
                 .permitAll()
@@ -36,3 +34,4 @@ public class WebSecurityConfig {
 
 
 }
+*/

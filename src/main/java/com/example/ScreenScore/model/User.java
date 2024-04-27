@@ -1,4 +1,4 @@
-package com.example.ScreenScore.model;
+/* package com.example.ScreenScore.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -67,3 +67,4 @@ public class User {
 
     
 }
+*/

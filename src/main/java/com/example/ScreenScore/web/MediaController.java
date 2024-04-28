@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.ScreenScore.model.Genre;
 import com.example.ScreenScore.model.GenreRepository;
@@ -113,4 +114,8 @@ public class MediaController {
         return "redirect:/medialist";
     }
 
+    @RequestMapping(value="/login")
+	public String login() {
+		return "login";
+	}    
 }

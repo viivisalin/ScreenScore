@@ -114,6 +114,7 @@ public class MediaController {
         return "redirect:/medialist";
     }
 
+    // Shows login view
     @RequestMapping(value="/login")
 	public String login() {
 		return "login";

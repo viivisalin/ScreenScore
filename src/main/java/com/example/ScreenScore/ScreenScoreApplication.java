@@ -13,6 +13,8 @@ import com.example.ScreenScore.model.Media;
 import com.example.ScreenScore.model.MediaRepository;
 import com.example.ScreenScore.model.MediaType;
 import com.example.ScreenScore.model.MediaTypeReposity;
+//import com.example.ScreenScore.model.User;
+//import com.example.ScreenScore.model.UserRepository;
 
 @SpringBootApplication
 public class ScreenScoreApplication {
@@ -28,6 +30,16 @@ public class ScreenScoreApplication {
 	@Bean
 	public CommandLineRunner mediaDemo(MediaRepository mRepository, GenreRepository gRepository, MediaTypeReposity mTypeReposity) {
 		return (args) -> {
+
+			/* 
+			User user1 = new User("user",
+			"user", "USER");
+			User user2 = new User("admin",
+			"admin", "ADMIN");
+			uRepository.save(user1);
+			uRepository.save(user2);
+			*/
+
 			log.info("save some sample genres");
 			Genre comedy = new Genre("Comedy");
 			gRepository.save(comedy);
